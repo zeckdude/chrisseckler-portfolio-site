@@ -1,0 +1,11 @@
+Text Message
+
+
+
+  $string=trim($string);
+ 
+ $string=htmlspecialchars($string);
+  
+$string=nl2br($string);
+  
+$string=stripslashes($string);

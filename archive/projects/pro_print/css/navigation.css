@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+
+ul#toc {
+	margin: 0;
+	padding: 0;
+	list-style:none;
+	float:left;
+	position:relative;
+	left: 35px;
+}
+
+
+ul#toc li {
+	float: left;
+	background: url(../images/navigation/tab-right.png) no-repeat top right;
+	margin-left: -15px;
+}
+
+ul#toc li a {
+	display: block;
+	padding: 0 40px;
+	line-height: 35px;
+	background: url(../images/navigation/tab-left.png) no-repeat top left;
+	text-decoration: none;
+	color: #000;
+	float: left;
+}
+
+.tab_color {
+	position: relative;
+	left: 10px;
+	background-image: url(../images/navigation/tab-middle.png);
+	background-color: #FEE7C0;
+	display: block;
+	height: 24px;
+}
+
+.tab_text {
+	position: relative;
+	top: -6px;
+	left: -4px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	padding-left: -12px;
+	padding-right: 12px;
+	font-size: 13px;
+}
+
+  /*Default z-indexes for tabs*/
+  #home_button {
+	  position: relative;
+	  z-index: 7;
+  }
+  
+  #services_button {
+	  position: relative;
+	  z-index: 6;
+  }
+  
+  #translations_button {
+	  position: relative;
+	  z-index: 5;
+  }
+  
+  #contact_button {
+	  position: relative;
+	  z-index: 4;
+  }
+  
+  #quotes_button {
+	  position: relative;
+	  z-index: 3;
+  }
+  
+  #business_button {
+	  position: relative;
+	  z-index: 2;
+  }
+  
+  #travel_button {
+	  position: relative;
+	  z-index: 1;
+  }

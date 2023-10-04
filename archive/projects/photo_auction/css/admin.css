@@ -1,0 +1,230 @@
+@charset "utf-8";
+/* CSS Document */
+
+.finished {
+	background-color: #3F3F3F;
+}
+
+/*ADMIN NAV*/
+
+#admin_nav li {
+	float: left;
+	list-style-type: none;
+	margin-top: -20px;
+	margin-bottom: 30px;
+}
+
+#admin_nav li a{
+	width: 100%;
+	height: 100%;
+	display: block;
+	text-indent: -9999px;
+}
+
+#list_btn {
+	background: url(../images/admin_view.gif) no-repeat;
+	width: 160px;
+	height: 37px;
+}
+
+#list_btn:hover {
+	background: url(../images/admin_view_hover.gif) no-repeat;	
+}
+
+#add_btn {
+	background: url(../images/admin_addphoto.gif) no-repeat;
+	width: 111px;
+	height: 37px;
+}
+
+#add_btn:hover {
+	background: url(../images/admin_addphoto_hover.gif) no-repeat;	
+}
+
+#manage_cat_btn {
+	background: url(../images/admin_manage.gif) no-repeat;
+	width: 182px;
+	height: 37px;
+}
+
+#manage_cat_btn:hover {
+	background: url(../images/admin_manage_hover.gif) no-repeat;	
+}
+
+.delete_btn {
+	background: url(../images/delete_btn.gif) no-repeat;
+	width: 56px;
+	height: 23px;
+	text-indent: -9999px;
+	border: none;
+	display: block;
+	cursor: pointer;
+}
+
+.delete_btn:hover {
+	background: url(../images/delete_btn_hover.gif) no-repeat;
+}
+
+.edit_btn {
+	background: url(../images/edit_btn.gif) no-repeat;
+	width: 42px;
+	height: 23px;
+	text-indent: -9999px;
+	border: none;
+	display: block;
+	cursor: pointer;
+}
+
+.edit_btn:hover {
+	background: url(../images/edit_btn_hover.gif) no-repeat;
+}
+
+.add_photo_btn {
+	background: url(../images/add_photo_btn.gif) no-repeat;
+	width: 141px;
+	height: 26px;
+	text-indent: -9999px;
+	border: none;
+	display: block;
+	cursor: pointer;
+}
+
+.add_photo_btn:hover {
+	background: url(../images/add_photo_btn_hover.gif) no-repeat;
+}
+
+.crop_btn {
+	margin-top: 10px;
+	background: url(../images/crop_btn.gif) no-repeat;
+	width: 116px;
+	height: 26px;
+	text-indent: -9999px;
+	border: none;
+	display: block;
+	cursor: pointer;
+}
+
+.crop_btn:hover {
+	background: url(../images/crop_btn_hover.gif) no-repeat;
+}
+
+.add_photographer_btn {
+	background: url(../images/add_photographer_btn.png) no-repeat;
+	width: 208px;
+	height: 26px;
+	text-indent: -9999px;
+	border: none;
+	display: block;
+	cursor: pointer;
+	padding-bottom: 10px;
+}
+
+.add_photographer_btn:hover {
+	background: url(../images/add_photographer_btn_hover.png) no-repeat;
+}
+
+.add_style_btn {
+	background: url(../images/add_style_btn.png) no-repeat;
+	width: 141px;
+	height: 26px;
+	text-indent: -9999px;
+	border: none;
+	display: block;
+	cursor: pointer;
+	padding-bottom: 10px;
+}
+
+.add_style_btn:hover {
+	background: url(../images/add_style_btn_hover.png) no-repeat;
+}
+
+.add_type_btn {
+	background: url(../images/add_type_btn.png) no-repeat;
+	width: 141px;
+	height: 26px;
+	text-indent: -9999px;
+	border: none;
+	display: block;
+	cursor: pointer;
+	padding-bottom: 10px;
+}
+
+.add_type_btn:hover {
+	background: url(../images/add_type_btn_hover.png) no-repeat;
+}
+
+
+
+/*ADMIN LIST PAGE*/
+#list_header th {
+	padding: 0px 15px 8px 15px;
+	width: 49px;
+	text-align: center;
+}
+
+.list_body td {
+	text-align: center;
+	background: url(../images/divider.gif) top right no-repeat;
+}
+
+
+/*ADD NEW PHOTO ENTRY PAGE*/
+
+.admin_items {
+	
+}
+
+.admin_items h1 {
+	font-size: 17px;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
+.admin_items table tr td {
+	padding-bottom: 10px;
+}
+
+/*MANAGE CATEGORIES PAGE*/
+.cat_table {
+	background-color: #1F1D1D; 
+	padding: 10px;
+	border: 1px solid #696868;
+	margin: 30px 0px;
+}
+
+.cat_table td {
+	padding: 4px 0px;	
+}
+
+.cat_table th {
+	padding: 0px 0px 7px 0px;
+	text-align: left;
+}
+
+#photographer_column {
+	width: 200px;	
+}
+
+#sitelink_column {
+	width: 280px;	
+}
+
+.extra_column {
+	width: 80px;
+}
+
+.warning {
+	margin: 10px 0;	
+}
+
+
+
+
+
+
+
+
+
+
+
+

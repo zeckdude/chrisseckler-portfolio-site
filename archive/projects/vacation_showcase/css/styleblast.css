@@ -1,0 +1,399 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* Reset */
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote,  
+pre, form, fieldset, table, th, td { margin: 0; padding: 0; }
+
+
+
+
+body {
+	background:url(../images/sandbg2.jpg);
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+#outercontainer {
+	
+	height: 1215px;
+	overflow: hidden;
+}
+
+#aboutusoutercontainer {
+	
+	height: 1212px;
+	overflow: hidden;
+}
+
+#scheduleoutercontainer {
+	
+	height: 1050px;
+	overflow: hidden;
+}
+
+#partsoutercontainer {
+	
+	height: 3240px;
+	overflow: hidden;
+}
+
+#container {
+	background: url(../images/containerbg.png);	
+	width: 722px;
+	height: 893px;
+	margin: 0 auto;
+	position: relative;
+	top: 18px;
+	left: -9px;
+	z-index: 1;
+}
+
+#aboutuscontainer {
+	background: url(../images/containerbg.png);	
+	width: 722px;
+	height: 892px;
+	margin: 0 auto;
+	position: relative;
+	top: 18px;
+	left: -9px;
+	z-index: 1;
+}
+
+#partscontainer {
+	background: url(../images/containerbg.png);	
+	width: 722px;
+	height: 2910px;
+	margin: 0 auto;
+	position: relative;
+	top: 18px;
+	left: -9px;
+	z-index: 1;
+}
+
+#schedulecontainer {
+	background: url(../images/containerbg.png);	
+	width: 722px;
+	height: 735px;
+	margin: 0 auto;
+	position: relative;
+	top: 18px;
+	left: -9px;
+	z-index: 1;
+}
+
+	#header {
+		background: url(../images/header.png);
+		width: 872px;
+		height: 244px;
+		position: relative;
+		margin: 0 auto;
+		z-index: 1;
+		left: -1px;
+		top: 18px;
+	}
+	
+	#title {
+		background: url(../images/title.png);
+		width: 722px;
+		height: 115px;
+	}
+	
+		#title > * {
+			text-indent: -9999px;	
+		}
+	
+	#nav {
+		background: url(../images/btnbox4.png);
+		width: 572px;
+		height: 69px;
+		margin: 0 auto;
+		position: relative;
+		left: -3px;
+		top: 15px;
+	}
+	
+	#partsnav {
+		background: url(../images/partsbtnbox.png);
+		width: 282px;
+		height: 69px;
+		margin: 0 auto;
+		position: relative;
+		left: -18px;
+		top: 15px;
+	}
+	
+		#aboutusbtn span {
+			background: url(../images/aboutusbtn.png) no-repeat;
+			display: block;
+			width: 119px;
+			height: 48px;
+			float: left;
+			margin-left: 12px;
+			margin-top: 11px;
+			text-indent: -9999px;
+		}
+		
+		#aboutusbtn span:hover {
+			background: url(../images/aboutusbtn_over.png) no-repeat;
+		}
+		
+		#partsbtn span{
+			background: url(../images/partsbtn.png) no-repeat;
+			display: block;
+			width: 147px;
+			height: 48px;
+			float: right;
+			margin-right: 14px;
+			margin-top: 11px;
+			text-indent: -9999px;
+		}
+		
+		#partsbtn span:hover {
+			background: url(../images/partsbtn_over.png) no-repeat;
+		}
+		
+		#indexbtn span{
+			background: url(../images/indexbtn.png) no-repeat;
+			display: block;
+			width: 119px;
+			height: 48px;
+			float: left;
+			margin-left: 18px;
+			margin-top: 11px;
+			text-indent: -9999px;
+		}
+		
+		#indexbtn span:hover {
+			background: url(../images/indexbtn_over.png) no-repeat;
+		}
+		
+		#schedulebtn span{
+			background: url(../images/schedulebtn.png) no-repeat;
+			display: block;
+			width: 119px;
+			height: 48px;
+			float: left; 
+			margin-left: 11px;
+			margin-top: 11px;
+			text-indent: -9999px;
+		}
+		
+		#schedulebtn span:hover {
+			background: url(../images/schedulebtn_over.png) no-repeat;
+			/*background-position:bottom;*/
+		}
+
+	#datelocation {
+		margin: 0 auto;	
+		width: 600px;
+		height: 109px;
+		margin-top: 24px;
+	}
+
+		#datelocation h1{
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 28px;
+			margin: 0 auto;	
+			width: 450px;
+		}
+		
+		#datelocation h2{
+			font-size: 26px;
+			font-weight:normal;
+			width: 290px;
+			margin: 0 auto;
+			letter-spacing: 1px;
+		}
+		
+		#datelocation h3{
+			font-size: 20px;
+			font-weight:normal;
+			width: 251px;
+			margin: 0 auto;
+		}
+	
+	#description {
+		background: url(../images/descbox.png);	
+		width: 569px;
+		height: 290px;
+		margin-left: 73px;
+	}
+	
+		#description h3 {
+			font-size: 18px;
+			width: 153px;
+			margin: 0 auto;
+			padding-top: 19px;
+		}
+	
+		#description #par1 {
+			font-size: 13px;
+			width: 232px;
+			float: left;
+			margin-left: 28px;
+			margin-top: 10px;
+			line-height: 19px;
+		}
+		
+		#description #par1 span, #description #par2 span {
+			font-weight: bold;
+		}
+		
+		#description #par2 {
+			font-size: 13px;
+			width: 255px;
+			float: right;
+			margin-top: 10px;
+			margin-right: 15px;
+			line-height: 19px;
+		}
+		
+	#ptedescription {
+		background: url(../images/ptebox.png) no-repeat;
+		width: 428px;
+		height: 164px;
+		margin-top: 40px;
+		margin-left: 145px;
+		font-family:Tahoma, Geneva, sans-serif;
+		font-size: 13px;
+		letter-spacing:.07em;
+		padding-left: 25px;
+		padding-top: 25px;
+	}
+	
+	#ptetext {
+		width: 383px;	
+	}
+	
+	#ptedescription span{
+		font-weight:bold;
+	}
+	
+	#contactinfo {
+		background: url(../images/contactinfobox.png) no-repeat;
+		width: 646px;
+		height: 393px;
+		margin-top: 12px;
+		margin-left: 39px;
+	}
+	
+	#schedule {
+		background: url(../images/schedulebox.png) no-repeat;
+		width: 646px;
+		height: 456px;
+		margin-top: 37px;
+		margin-left: 39px;	
+	}
+	
+	#partsinfo {
+		background: url(../images/partsinfobox.png) no-repeat;
+		width: 646px;
+		height: 2625px;
+		margin-top: 45px;
+		margin-left: 39px;
+	}
+	
+	#footer {
+		background: url(../images/freeadmissionbar2.png) no-repeat;	
+		width: 722px;
+		height: 333px;
+		margin-top: 22px;
+		
+	}
+	
+	#footer h1 {
+		text-indent: -9999px;	
+	}
+	
+	#footertext {
+		width: 460px;
+		margin: 0 auto;
+		line-height: 30px;
+		margin-top: 60px;
+	}
+	
+	
+	#footer h2 {
+		font-size: 21px;
+		font-weight: normal;
+		letter-spacing: 1px;
+		margin-top: 22px;
+		margin: 0 auto;
+	}
+	
+	#footer h2 span {
+		font-weight: bold;
+		font-family: Verdana, Geneva, sans-serif;
+	}
+	
+	#ideapalette {
+		font-family:Tahoma; 
+		font-size: .6em; 
+		color:#000000; 
+		position:relative; 
+		top:5px;
+		margin: 0 auto;
+		width: 252px;
+	}
+		
+#shadow {
+		background: url(../images/shadow.png) no-repeat;
+		width: 740px;
+		height: 1025px;
+		
+		position: relative;
+		top: -992px;
+		left: -9px;
+		/*left: 253px;*/
+		margin: 0 auto;	
+}
+
+#aboutusshadow {
+		background: url(../images/aboutusshadow.png) no-repeat;
+		width: 740px;
+		height: 954px;
+		
+		position: relative;
+		top: -921px;
+		left: -9px;
+		/*left: 253px;*/
+		margin: 0 auto;
+}
+
+#partsshadow {
+		background: url(../images/partsshadow.png) no-repeat;
+		width: 740px;
+		height: 3005px;
+		position: relative;
+		top: -2972px;
+		left: -9px;
+		/*left: 253px;*/
+		margin: 0 auto;
+}
+
+#scheduleshadow {
+		background: url(../images/scheduleshadow.png) no-repeat;
+		width: 740px;
+		height: 839px;
+		
+		position: relative;
+		top: -806px;
+		left: -9px;
+		/*left: 253px;*/
+		margin: 0 auto;
+}
+
+a, a:link, a:active, a:visited {
+	text-decoration: 	none;
+	color:				#3b2818;
+}
+
+
+
+a:hover {
+	color: #f9dbbb;
+}
+
+		
+

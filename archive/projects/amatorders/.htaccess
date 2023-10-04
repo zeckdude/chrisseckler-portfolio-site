@@ -1,0 +1,10 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^amatorders\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.amatorders\.com$
+RewriteRule ^index\.php$ "http\:\/\/www\.amatorders\.com\/administrative_details\.php" [R=302,L]
+
+RewriteCond %{HTTP_HOST} ^amatorders\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.amatorders\.com$
+RewriteRule ^/?$ "http\:\/\/www\.amatorders\.com\/administrative_details\.php" [R=302,L]
+

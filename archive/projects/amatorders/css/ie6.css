@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+
+
+/* GENERAL RULES */
+#header #nav {
+	position:relative;
+	left: -225px;
+}
+
+.form_container {
+	background-color: #ffffff;	
+}
+
+.submit {
+	height: 28px;
+	padding-left: 0px;
+	padding-right: 0px;
+	cursor: pointer;
+}
+
+.clearBoth {
+	clear: both;	
+}
+
+
+/* ADMIN DETAILS */
+/*#admin_details .content { 
+	height: 52px;  
+}*/
+
+#admin_details .row {
+	overflow:visible;
+	height:23px;
+}
+
+#admin_details .content {
+	height:30px;
+}
+
+/* LANGUAGE OPTIONS */
+#language_details .clientform_table_header {
+	width: 640px;
+}
+
+#language_details .row {
+	overflow:visible;
+	height:23px;
+}
+
+#language_details .content {
+	height:30px;
+}
+
+#language_details #foreign_cont_1 {
+	width: 355px;	
+}
+
+#language_details #foreign_500_area {
+	position:relative;
+	top: -15px;
+}
+
+/* LOCATION DETAILS */
+#location_details {
+	width: 365px;
+}
+
+#location_details .clientform_table_header {
+	width: 335px;
+}
+
+#location_details .row {
+	width: 100%;
+}
+
+#location_details #location_buttons {
+	width: 312px;
+	left: 26px;
+}
+
+#location_buttons #us_address_submit {
+	position: relative;
+	top: -1px;
+}
+
+
+/* US CARD DETAILS */
+#card_details {
+	width: 475px;	
+}
+
+#card_details .row {
+	width: 100%;
+}
+
+#card_details #title_area {
+	clear: both;	
+}
+
+#card_details #additional_contact_button {
+	clear: both;	
+}
+
+#card_details .clientform_table_header {
+	width: 445px;	
+}
+
+/* NOTEPAD OPTIONS */
+#notepad_options .clientform_table_header {
+	width: 270px;	
+}
+
+/* SHIPPING OPTIONS */
+#shipping_details {
+	width: 420px
+}
+
+#shipping_details .clientform_table_header {
+	width: 390px;	
+}
+
+#shipping_details .row {
+	overflow:visible;
+	height:45px;
+}
+
+/* COMMENTS */
+#comments .clientform_table_header {
+	width: 390px;	
+}
+
+/* PROOF CONFIRMATION */
+#card_sample_area {
+	width: 745px;	
+}
+
+#english_card_container, #foreign_card_container {
+	width: 300px;	
+}
+
+#english_card_container .clientform_table_header, #foreign_card_container .clientform_table_header {
+	width: 302px;	
+}
+
+#english_card_container .row, #foreign_card_container .row {
+	width: 300px;	
+	overflow: visible;
+}
+
+
+
+
+
+/* REQUEST CUSTOM PROOF */
+#custom_proof_box {
+	width:454px;	
+}
+
+#custom_proof_box .row {
+	width: 100%;
+	overflow: visible;
+}
+
+#shipping_options_bar {
+	width: 100%;	
+}
+
+#thankyou_last_content_1 {
+	padding-right: 0;
+}
+
+#thankyou_last_content_2 {
+	float: left;	
+}
+
+#custom_proof_box #thankyou_last_content_2 .button {
+	margin:0 1px;	
+	padding-left:0 !important;
+    padding-right:0 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

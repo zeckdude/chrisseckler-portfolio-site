@@ -1,0 +1,60 @@
+
+
+
+
+
+
+.rounded_corner {
+}
+
+.rounded_corner .top {
+	height: 15px;
+	/*background-image: url(images/top.png);*/
+}
+
+.rounded_corner .top_left {
+	height: 49px;
+	width: 52px;
+	/*background-image: url(images/top_left.png);*/
+}
+
+.rounded_corner .top_right {
+	height: 49px;
+	width: 52px;
+	/*background-image: url(images/top_right.png);*/
+}
+
+.rounded_corner .bottom {
+	height: 52px;
+	background-image: url(images/bottomcenter.png);
+}
+
+.rounded_corner .bottom_left {
+	height: 51px;
+	width: 52px;
+	background-image: url(images/bottomleft.png);
+}
+
+.rounded_corner .bottom_right {
+	height: 49px;
+	width: 52px;
+	background-image: url(images/bottomright.png);
+	background-repeat: no-repeat;
+}
+
+.rounded_corner .left {
+	width: 51px;
+	background-image: url(images/middleleft.png);
+}
+
+.rounded_corner .right {
+	width: 45px;
+	background-image: url(images/middleright.png);
+	background-repeat: no-repeat;
+	background-position: 4px;
+}
+
+.rounded_corner .content {
+	height: 100%;
+	background-image: url(images/containerbg.png);
+}

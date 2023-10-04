@@ -1,0 +1,10 @@
+English: Hello World
+Greek: Γειά σου κόσμος
+Polish: Witaj świecie
+Portuguese: Olá mundo
+Russian: Здравствулте мир
+Vietnamese: Xin chào thế giới
+Japanese: ェアに関する興味
+Chinese Traditional: 混蛋, 我們這裡一
+Chinese Simpl: 前辈征求意见。在计
+Korean: 스 트리를 자동화하여 전체를 일

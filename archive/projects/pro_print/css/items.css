@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+#calculator {
+	background: url(../images/items/calculator.png) no-repeat;
+	position: absolute;
+	width: 188px;
+	height: 328px;
+	left: -230px;
+	top: -150px;
+}
+
+#pen1 {
+	background: url(../images/items/pen1.png) no-repeat bottom right;
+	position: absolute;
+	width: 291px;
+	height: 276px;
+	left: 620px;
+	top: -120px;
+	cursor: pointer;
+}
+
+#stapler {
+	background: url(../images/items/stapler.png) no-repeat bottom left;
+	position: absolute;
+	width: 203px;
+	height: 370px;
+	left: -200px;
+	top: 280px;
+	cursor: pointer;
+}
+
+#postit {
+	background: url(../images/items/postit.png) no-repeat bottom left;
+	position: absolute;
+	width: 198px;
+	height: 183px;
+	left: 740px;
+	top: 240px;
+}
+
+#coffeecup {
+	background: url(../images/items/coffeecup.png) no-repeat bottom left;
+	position: absolute;
+	width: 360px;
+	height: 285px;
+	left: -411px;
+	top: 130px;
+}
+
+#iphone {
+	background: url(../images/items/iphone.png) no-repeat bottom left;
+	position: absolute;
+	width: 202px;
+	height: 342px;
+	left: 950px;
+	top: 130px;
+}
