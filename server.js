@@ -1,6 +1,5 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
-const { createServer } = require('@vercel/node');
 
 const app = express();
 
@@ -16,8 +15,13 @@ app.get('/', (req, res) => {
   res.render('simple.njk');
 });
 
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
 // Export the app wrapped in a serverless function
-module.exports = createServer(app);
+module.exports = app;
 
 // const express = require('express');
 // const nunjucks = require('nunjucks');
