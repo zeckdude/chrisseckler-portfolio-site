@@ -1,6 +1,6 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
-const path = require('path');
+const { createServer } = require('@vercel/node');
 
 const app = express();
 
@@ -16,11 +16,31 @@ app.get('/', (req, res) => {
   res.render('simple.njk');
 });
 
-// Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// Export the app wrapped in a serverless function
+module.exports = createServer(app);
+
+// const express = require('express');
+// const nunjucks = require('nunjucks');
+
+// const app = express();
+
+// // Configure Nunjucks to use the 'views' directory
+// nunjucks.configure('views', {
+//   autoescape: true,
+//   express: app,
+//   watch: true,
+// });
+
+// // Serve a simple route
+// app.get('/', (req, res) => {
+//   res.render('simple.njk');
+// });
+
+// // Start the server
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}`);
+// });
 
 // const express = require('express');
 // const nunjucks = require('nunjucks');
