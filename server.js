@@ -13,7 +13,7 @@ nunjucks.configure('views', {
 
 // Serve a simple route
 app.get('/', (req, res) => {
-  res.send('<h1>Hello World</h1>');
+  res.render('simple.njk');
 });
 
 // Start the server
