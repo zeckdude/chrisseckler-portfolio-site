@@ -12,4 +12,5 @@ module.exports = {
   proseWrap: 'preserve',
   // printWidth set to 120 to avoid jsx spaces per https://github.com/prettier/prettier/issues/4223#issuecomment-521294857
   printWidth: 120,
+  plugins: ['prettier-plugin-nunjucks'],
 };
