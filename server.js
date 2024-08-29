@@ -75,7 +75,7 @@ app.get('/links', (req, res) => {
     res.render('links.njk', { links: linksData, pageName, navBarLinks });
   } catch (err) {
     console.error('Error rendering template:', err);
-    res.status(500).send('Internal Server Error');
+    res.status(500).send('Internal Server Error!');
   }
 });
 
