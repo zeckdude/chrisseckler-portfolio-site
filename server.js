@@ -48,30 +48,35 @@ const navBarLinks = [
 
 // Define routes
 app.get('/links', (req, res) => {
-  const linksData = [
-    {
-      url: 'https://stackoverflow.com',
-      imgSrc: 'https://picsum.photos/600/400?a',
-      title: 'Stack Overflow',
-      description: 'A question and answer site for professional and enthusiast programmers.',
-    },
-    {
-      url: 'https://github.com',
-      imgSrc: 'https://picsum.photos/600/400?b',
-      title: 'GitHub',
-      description: 'A platform for version control and collaboration.',
-    },
-    {
-      url: 'https://codepen.io',
-      imgSrc: 'https://picsum.photos/600/400?c',
-      title: 'CodePen',
-      description: 'An online community for testing and showcasing HTML, CSS, and JavaScript code snippets.',
-    },
-  ];
+  try {
+    const linksData = [
+      {
+        url: 'https://stackoverflow.com',
+        imgSrc: 'https://picsum.photos/600/400?a',
+        title: 'Stack Overflow',
+        description: 'A question and answer site for professional and enthusiast programmers.',
+      },
+      {
+        url: 'https://github.com',
+        imgSrc: 'https://picsum.photos/600/400?b',
+        title: 'GitHub',
+        description: 'A platform for version control and collaboration.',
+      },
+      {
+        url: 'https://codepen.io',
+        imgSrc: 'https://picsum.photos/600/400?c',
+        title: 'CodePen',
+        description: 'An online community for testing and showcasing HTML, CSS, and JavaScript code snippets.',
+      },
+    ];
 
-  const pageName = 'Links';
+    const pageName = 'Links';
 
-  res.render('links.njk', { links: linksData, pageName, navBarLinks });
+    res.render('links.njk', { links: linksData, pageName, navBarLinks });
+  } catch (err) {
+    console.error('Error rendering template:', err);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 app.get('/', (req, res) => {
