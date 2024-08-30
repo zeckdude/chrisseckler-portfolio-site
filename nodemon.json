@@ -1,0 +1,5 @@
+{
+  "watch": ["views/", "public/css/"],
+  "ext": "njk,css,js",
+  "exec": "vercel dev"
+}

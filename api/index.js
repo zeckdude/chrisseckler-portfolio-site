@@ -1,6 +1,9 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
 const path = require('path');
+import { constants, projectCategories } from '../constants';
+
+const { personalLinks, navBarLinks, skills, projects } = constants;
 
 const app = express();
 
@@ -9,70 +12,18 @@ nunjucks.configure('views', {
   autoescape: true,
   express: app,
   watch: true,
+  noCache: true,
 });
 
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, '../public')));
 
-const navBarLinks = [
-  {
-    href: '/#services',
-    title: 'Why choose me',
-  },
-  {
-    href: '/#about',
-    title: 'Who am I',
-  },
-  {
-    href: '/#skills',
-    title: 'Skills',
-  },
-  {
-    href: '/#portfolio',
-    title: 'Projects',
-  },
-  {
-    href: '/#experience',
-    title: 'Experience',
-  },
-  {
-    href: '/links',
-    title: 'Links',
-    isScrollLink: false,
-  },
-  {
-    href: '/#contact',
-    title: 'Get in touch',
-  },
-];
-
 // Define routes
 app.get('/links', (req, res) => {
   try {
-    const linksData = [
-      {
-        url: 'https://stackoverflow.com',
-        imgSrc: 'https://picsum.photos/600/400?a',
-        title: 'Stack Overflow',
-        description: 'A question and answer site for professional and enthusiast programmers.',
-      },
-      {
-        url: 'https://github.com',
-        imgSrc: 'https://picsum.photos/600/400?b',
-        title: 'GitHub',
-        description: 'A platform for version control and collaboration.',
-      },
-      {
-        url: 'https://codepen.io',
-        imgSrc: 'https://picsum.photos/600/400?c',
-        title: 'CodePen',
-        description: 'An online community for testing and showcasing HTML, CSS, and JavaScript code snippets.',
-      },
-    ];
-
     const pageName = 'Links';
 
-    res.render('links.njk', { links: linksData, pageName, navBarLinks });
+    res.render('links.njk', { myLinks: personalLinks, pageName, navBarLinks });
   } catch (err) {
     console.error('Error rendering template:', err);
     res.status(500).send('Internal Server Error!');
@@ -80,7 +31,7 @@ app.get('/links', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.render('home.njk', { navBarLinks });
+  res.render('home.njk', { navBarLinks, skills, projects, projectCategories: Object.values(projectCategories) });
 });
 
 // Export the Express app as a serverless function

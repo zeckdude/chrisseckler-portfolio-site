@@ -1,6 +1,12 @@
 {% extends "layouts/page.njk" %}
 
 {% block content %}
+  <style>
+    body {
+      background-color: #f9f9f9;
+    }
+  </style>
+
   <!-- LINKS SECTION -->
   <section id="favorite-links" class="links-section">
     <header class="section-header">
@@ -9,69 +15,17 @@
     </header>
 
     <div class="links">
-      <a href="https://stackoverflow.com" target="_blank">
-        <div class="link-item">
-          <!-- <img src="images/stackoverflow.png" alt="Stack Overflow" class="link-image" /> -->
-          <img src="https://picsum.photos/600/400?a" alt="Stack Overflow" class="link-image" />
-          <div class="link-text">
-            <h2 class="link-title">Stack Overflow</h2>
-            <p class="link-description">A question and answer site for professional and enthusiast programmers.</p>
+      {% for link in myLinks %}
+        <a href="{{ link.url }}" target="_blank">
+          <div class="link-item">
+            <img src="{{ link.imgSrc }}" alt="{{ link.imageAlt }}" class="link-image" />
+            <div class="link-text">
+              <h2 class="link-title">{{ link.title }}</h2>
+              <p class="link-description">{{ link.description }}</p>
+            </div>
           </div>
-        </div>
-      </a>
-      <a href="https://github.com" target="_blank">
-        <div class="link-item">
-          <img src="https://picsum.photos/600/400?b" alt="Stack Overflow" class="link-image" />
-          <div class="link-text">
-            <h2 class="link-title">GitHub</h2>
-            <p class="link-description">A platform for version control and collaboration.</p>
-          </div>
-        </div>
-      </a>
-      <a href="https://codepen.io" target="_blank">
-        <div class="link-item">
-          <img src="https://picsum.photos/600/400?c" alt="Stack Overflow" class="link-image" />
-          <div class="link-text">
-            <h2 class="link-title">CodePen</h2>
-            <p class="link-description">
-              An online community for testing and showcasing HTML, CSS, and JavaScript code snippets.
-            </p>
-          </div>
-        </div>
-      </a>
-      <a href="https://codepen.io" target="_blank">
-        <div class="link-item">
-          <img src="https://picsum.photos/600/400?d" alt="Stack Overflow" class="link-image" />
-          <div class="link-text">
-            <h2 class="link-title">CodePen</h2>
-            <p class="link-description">
-              An online community for testing and showcasing HTML, CSS, and JavaScript code snippets.
-            </p>
-          </div>
-        </div>
-      </a>
-      <a href="https://codepen.io" target="_blank">
-        <div class="link-item">
-          <img src="https://picsum.photos/600/400?e" alt="Stack Overflow" class="link-image" />
-          <div class="link-text">
-            <h2 class="link-title">CodePen</h2>
-            <p class="link-description">
-              An online community for testing and showcasing HTML, CSS, and JavaScript code snippets.
-            </p>
-          </div>
-        </div>
-      </a>
-      <a href="https://codepen.io" target="_blank">
-        <div class="link-item">
-          <img src="https://picsum.photos/600/400?f" alt="Stack Overflow" class="link-image" />
-          <div class="link-text">
-            <h2 class="link-title">CodePen</h2>
-            <p class="link-description">
-              An online community for testing and showcasing HTML, CSS, and JavaScript code snippets.
-            </p>
-          </div>
-        </div>
-      </a>
+        </a>
+      {% endfor %}
     </div>
   </section>
 {% endblock %}

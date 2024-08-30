@@ -15,6 +15,7 @@
     "nunjucks": "^3.2.4"
   },
   "devDependencies": {
+    "browser-sync": "^3.0.2",
     "prettier-plugin-nunjucks": "github:justrhysism/prettier-plugin-nunjucks"
   }
 }

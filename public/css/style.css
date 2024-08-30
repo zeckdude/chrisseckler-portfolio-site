@@ -1,6 +1,12 @@
 /*--------------------
 -----Main Styles------
 ----------------------*/
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   font-family: 'Titillium Web', sans-serif;
   font-size: 18px;
@@ -1902,6 +1908,7 @@ a:focus,
   background-color: #f9f9f9;
   text-align: center;
   box-sizing: border-box;
+  height: 100%;
 }
 
 .links {
@@ -1986,4 +1993,15 @@ a:focus,
   align-items: center;
   height: 100vh;
   gap: 30px;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
 }

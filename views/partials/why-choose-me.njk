@@ -10,69 +10,20 @@
     </header>
 
     <div class="row services">
-      <div class="col-md-3 col-sm-6 item scrollimation fade-up">
-        <div class="icon">
-          <img
-            class="img-responsive img-center"
-            src="https://s3-us-west-1.amazonaws.com/chris-seckler-portfolio-site/assets/images/service1.png"
-            alt=""
-          />
+      {% for skill in skills %}
+        <div class="col-md-3 col-sm-6 item scrollimation fade-up {% if loop.index0 > 0 %}d{{ loop.index0 }}{% endif %}">
+          <div class="icon">
+            <img
+              class="img-responsive img-center"
+              src="{{ skill.imageUrl }}"
+              alt=""
+            />
+          </div>
+
+          <h2>{{ skill.title }}</h2>
+          <p>{{ skill.description }}</p>
         </div>
-
-        <h2>Mobile Responsive</h2>
-        <p>
-          I create websites that are not only HTML5 and CSS3 compliant, but also look great on the multitude of
-          devices on the market today.
-        </p>
-      </div>
-
-      <div class="col-md-3 col-sm-6 item scrollimation fade-up d1">
-        <div class="icon">
-          <img
-            class="img-responsive img-center"
-            src="https://s3-us-west-1.amazonaws.com/chris-seckler-portfolio-site/assets/images/service2.png"
-            alt=""
-          />
-        </div>
-
-        <h2>Versatile</h2>
-        <p>
-          My core skill set lies in the front-end development of websites, but I am also experienced in PHP and
-          MySQL databases.
-        </p>
-      </div>
-
-      <div class="col-md-3 col-sm-6 item scrollimation fade-up d2">
-        <div class="icon">
-          <img
-            class="img-responsive img-center"
-            src="https://s3-us-west-1.amazonaws.com/chris-seckler-portfolio-site/assets/images/service3.png"
-            alt=""
-          />
-        </div>
-
-        <h2>Interactive</h2>
-        <p>
-          While web development is my bread and butter, I am also familiar in other areas, including graphic design
-          and sound & video editing.
-        </p>
-      </div>
-
-      <div class="col-md-3 col-sm-6 item scrollimation fade-up d3">
-        <div class="icon">
-          <img
-            class="img-responsive img-center"
-            src="https://s3-us-west-1.amazonaws.com/chris-seckler-portfolio-site/assets/images/service4.png"
-            alt=""
-          />
-        </div>
-
-        <h2>Adaptive</h2>
-        <p>
-          Having served 8 years in the military and worked 4 years in an agency environment, I excel in team
-          environments.
-        </p>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
