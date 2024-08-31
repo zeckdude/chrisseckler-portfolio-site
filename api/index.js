@@ -22,14 +22,16 @@ const fetchPersonalLinks = async () => {
         },
       ],
     });
-    return response.results.map((page) => {
-      return {
-        url: page.properties.url.rich_text[0].plain_text,
-        imgSrc: page.properties.imgSrc.rich_text[0].plain_text,
-        title: page.properties.title.title[0].plain_text,
-        description: page.properties.description.rich_text[0].plain_text,
-      };
-    });
+    return response.results
+      .filter((page) => !!page.properties.isActive.checkbox)
+      .map((page) => {
+        return {
+          url: page.properties.url.rich_text[0].plain_text,
+          imgSrc: page.properties.imgSrc.rich_text[0].plain_text,
+          title: page.properties.title.title[0].plain_text,
+          description: page.properties.description.rich_text[0].plain_text,
+        };
+      });
   } catch (error) {
     console.error('Error fetching data from Notion:', error);
     throw error; // rethrow to be caught in the route handler
