@@ -1,11 +1,34 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
 const path = require('path');
+const { notion } = require('../lib/notion/client');
+
+require('dotenv').config();
+
 import { constants, projectCategories } from '../constants';
 
-const { personalLinks, navBarLinks, skills, projects } = constants;
+const { navBarLinks, skills, projects } = constants;
 
 const app = express();
+
+const fetchPersonalLinks = async () => {
+  try {
+    const response = await notion.databases.query({
+      database_id: process.env.LINKS_NOTION_DATABASE_ID,
+    });
+    return response.results.map((page) => {
+      return {
+        url: page.properties.url.rich_text[0].plain_text,
+        imgSrc: page.properties.imgSrc.rich_text[0].plain_text,
+        title: page.properties.title.title[0].plain_text,
+        description: page.properties.description.rich_text[0].plain_text,
+      };
+    });
+  } catch (error) {
+    console.error('Error fetching data from Notion:', error);
+    throw error; // rethrow to be caught in the route handler
+  }
+};
 
 // Configure Nunjucks to use the 'views' directory
 nunjucks.configure('views', {
@@ -19,11 +42,12 @@ nunjucks.configure('views', {
 app.use(express.static(path.join(__dirname, '../public')));
 
 // Define routes
-app.get('/links', (req, res) => {
+app.get('/links', async (req, res) => {
   try {
     const pageName = 'Links';
+    const myLinks = await fetchPersonalLinks();
 
-    res.render('links.njk', { myLinks: personalLinks, pageName, navBarLinks });
+    res.render('links.njk', { myLinks, pageName, navBarLinks });
   } catch (err) {
     console.error('Error rendering template:', err);
     res.status(500).send('Internal Server Error!');

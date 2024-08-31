@@ -74,26 +74,6 @@ export const projectCategories = {
 };
 
 export const constants = {
-  personalLinks: [
-    {
-      url: 'https://stackoverflow.com',
-      imgSrc: 'https://picsum.photos/600/400?a',
-      title: 'Stack Overflow',
-      description: 'A question and answer site for professional and enthusiast programmers.',
-    },
-    {
-      url: 'https://github.com',
-      imgSrc: 'https://picsum.photos/600/400?b',
-      title: 'GitHub',
-      description: 'A platform for version control and collaboration.',
-    },
-    {
-      url: 'https://codepen.io',
-      imgSrc: 'https://picsum.photos/600/400?c',
-      title: 'CodePen',
-      description: 'An online community for testing and showcasing HTML, CSS, and JavaScript code snippets.',
-    },
-  ],
   navBarLinks: [
     {
       href: '/#services',

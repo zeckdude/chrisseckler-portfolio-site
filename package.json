@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@notionhq/client": "^2.2.15",
     "chokidar": "^3.6.0",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "nunjucks": "^3.2.4"
   },
