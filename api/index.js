@@ -15,6 +15,12 @@ const fetchPersonalLinks = async () => {
   try {
     const response = await notion.databases.query({
       database_id: process.env.LINKS_NOTION_DATABASE_ID,
+      sorts: [
+        {
+          property: 'title', // Replace with the name of the property that determines order
+          direction: 'ascending', // or 'descending' depending on your desired order
+        },
+      ],
     });
     return response.results.map((page) => {
       return {
