@@ -96,11 +96,6 @@ export const constants = {
       title: 'Experience',
     },
     {
-      href: '/links',
-      title: 'Links',
-      isScrollLink: false,
-    },
-    {
       href: '/#contact',
       title: 'Get in touch',
     },
