@@ -1,1 +1,0 @@
-<p id="ideapalette">This site was designed and developed by <b><a href="http://www.dynamicpalette.com">Dynamic Palette</a></b></p>
