@@ -84,7 +84,7 @@ export default function ContactLinks() {
               className="group flex items-center gap-4 rounded-md border border-border bg-surface p-5 transition-colors duration-200 hover:border-accent/40"
             >
               <link.icon className="h-5 w-5 shrink-0 text-accent" strokeWidth={1.75} aria-hidden />
-              <span className="font-mono text-sm text-text-primary transition-colors group-hover:text-accent">
+              <span className="text-sm font-semibold text-text-primary transition-colors group-hover:text-accent">
                 {link.label}
               </span>
             </a>

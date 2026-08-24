@@ -46,7 +46,13 @@ export default function FullTimePage() {
         <Reveal>
           <div className="mt-10 flex flex-wrap gap-4">
             <Magnetic>
-              <Button href={fullTime.cta.resumeUrl} external event="resume downloaded">Download Resume</Button>
+              <Button
+                href={fullTime.cta.resumeUrl}
+                download={fullTime.cta.resumeDownloadName}
+                event="resume downloaded"
+              >
+                Download Resume
+              </Button>
             </Magnetic>
             <Magnetic>
               <Button href="/contact" variant="ghost" event="contact intent" eventProps={{ source: "full-time" }}>Get in touch</Button>
@@ -302,7 +308,13 @@ export default function FullTimePage() {
             <p className="max-w-md text-text-secondary">{fullTime.cta.subtext}</p>
             <div className="flex flex-wrap justify-center gap-4">
               <Magnetic>
-                <Button href={fullTime.cta.resumeUrl} external event="resume downloaded">Download Resume</Button>
+                <Button
+                href={fullTime.cta.resumeUrl}
+                download={fullTime.cta.resumeDownloadName}
+                event="resume downloaded"
+              >
+                Download Resume
+              </Button>
               </Magnetic>
               <Magnetic>
                 <Button href="/contact" variant="ghost" event="contact intent" eventProps={{ source: "full-time" }}>Get in touch</Button>

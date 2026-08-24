@@ -11,7 +11,6 @@ import PresenceTracker from "@/components/presence-tracker";
 import { PostHogProvider, PostHogPageview } from "@/components/posthog-provider";
 import ErrorBoundary from "@/components/error-boundary";
 import { ThemeProvider } from "@/components/theme-provider";
-import { THEME_INIT_SCRIPT } from "@/lib/theme";
 import "./globals.css";
 
 const inter = Inter({
@@ -52,7 +51,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <link rel="preconnect" href="https://api.fontshare.com" />
         <link
           href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,500&display=swap"

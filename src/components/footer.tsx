@@ -33,8 +33,9 @@ function FooterLinkItem({ link }: { link: FooterLink }) {
     return (
       <a
         href={link.href}
-        target="_blank"
-        rel="noopener noreferrer"
+        download={link.download}
+        target={link.download ? undefined : "_blank"}
+        rel={link.download ? undefined : "noopener noreferrer"}
         onClick={onClick}
         className={className}
       >

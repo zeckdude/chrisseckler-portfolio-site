@@ -10,6 +10,7 @@ interface ButtonProps {
   className?: string;
   children: React.ReactNode;
   external?: boolean;
+  download?: string;
   event?: "outbound link clicked" | "resume downloaded" | "contact intent";
   eventProps?: Record<string, unknown>;
 }
@@ -20,6 +21,7 @@ export default function Button({
   className,
   children,
   external = false,
+  download,
   event,
   eventProps,
 }: ButtonProps) {
@@ -39,9 +41,16 @@ export default function Button({
     if (external) track("outbound link clicked", { href, ...eventProps });
   }
 
-  if (external) {
+  if (external || download) {
     return (
-      <a href={href} target="_blank" rel="noreferrer" className={classes} onClick={handleClick}>
+      <a
+        href={href}
+        download={download}
+        target={download ? undefined : "_blank"}
+        rel={download ? undefined : "noreferrer"}
+        className={classes}
+        onClick={handleClick}
+      >
         {children}
       </a>
     );

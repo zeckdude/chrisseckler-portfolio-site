@@ -20,8 +20,7 @@ export const portfolioArchives: PortfolioArchive[] = [
     stack: ["Express", "Nunjucks", "jQuery", "Bootstrap"],
     blurb:
       "The site live at chrisseckler.com from 2024 through the 2026 redesign — project masonry, modal case studies, and a single-page scroll layout.",
-    screenshot:
-      "https://s3-us-west-1.amazonaws.com/chris-seckler-portfolio-site/assets/images/about.jpg",
+    screenshot: "/images/archive/2024-portfolio-preview.png",
     url: "https://2024.archive.chrisseckler.com",
     status: "live",
   },

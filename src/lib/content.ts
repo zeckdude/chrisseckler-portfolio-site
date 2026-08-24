@@ -6,6 +6,11 @@ export const siteConfig = {
   github: "https://github.com/zeckdude",
 };
 
+export const resume = {
+  url: "/resume.pdf",
+  downloadName: "Chris-Seckler-Resume.pdf",
+} as const;
+
 export const home = {
   positioning:
     "I build products people actually use — from zero to launch and everything after.",
@@ -141,7 +146,8 @@ export const fullTime = {
   cta: {
     headline: "Let's find out if we're a match.",
     subtext: "Reach out directly, or start with the resume. I respond to everything.",
-    resumeUrl: "/resume.pdf",
+    resumeUrl: resume.url,
+    resumeDownloadName: resume.downloadName,
   },
 };
 
@@ -162,6 +168,7 @@ export type FooterLink = {
   label: string;
   description?: string;
   external?: boolean;
+  download?: string;
   event?: "resume downloaded";
 };
 
@@ -191,10 +198,11 @@ export const footer = {
         { href: "/full-time", label: "Full-time", description: "Senior IC and founding roles" },
         { href: "/contact", label: "Contact", description: "Start a conversation" },
         {
-          href: "/resume.pdf",
+          href: resume.url,
           label: "Resume",
           description: "PDF download",
           external: true,
+          download: resume.downloadName,
           event: "resume downloaded",
         },
       ] satisfies FooterLink[],

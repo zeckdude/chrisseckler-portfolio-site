@@ -1,5 +1,6 @@
 "use client";
 
+import { useServerInsertedHTML } from "next/navigation";
 import {
   createContext,
   useCallback,
@@ -14,6 +15,7 @@ import {
   getStoredTheme,
   getSystemTheme,
   resolveTheme,
+  THEME_INIT_SCRIPT,
   THEME_STORAGE_KEY,
   type Theme,
 } from "@/lib/theme";
@@ -26,13 +28,13 @@ interface ThemeContextValue {
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
-function readThemeFromDom(): Theme {
-  if (typeof document === "undefined") return "dark";
-  return document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
-}
-
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>(readThemeFromDom);
+  useServerInsertedHTML(() => (
+    <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+  ));
+
+  // Match SSR default; sync from DOM/localStorage after mount (init script sets data-theme).
+  const [theme, setThemeState] = useState<Theme>("dark");
 
   const setTheme = useCallback((next: Theme) => {
     localStorage.setItem(THEME_STORAGE_KEY, next);

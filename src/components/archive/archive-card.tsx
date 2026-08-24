@@ -16,7 +16,7 @@ export default function ArchiveCard({ archive }: { archive: PortfolioArchive }) 
             src={archive.screenshot}
             alt=""
             fill
-            className="object-cover object-top"
+            className="object-contain object-center"
             sizes="(max-width: 768px) 100vw, 400px"
           />
         </div>
