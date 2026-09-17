@@ -8,7 +8,7 @@ export const siteConfig = {
 
 export const resume = {
   url: "/resume.pdf",
-  downloadName: "Chris-Seckler-Resume.pdf",
+  downloadName: "chris-seckler-resume.pdf",
 } as const;
 
 export const home = {
